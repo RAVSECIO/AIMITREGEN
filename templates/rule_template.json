@@ -1,0 +1,16 @@
+{
+  "Rule Name": "",
+  "Rule Syntax 1": "",
+  "Rule Syntax ref": "",
+  "MITRE Technique ID": "",
+  "MITRE Technique": "",
+  "MITRE Tactic": "",
+  "Correlation Score": 0.0,
+  "Data Sources": [],
+  "Tech Categories": [],
+  "Recommended Technologies": [],
+  "Correlation Logic": "To be defined by correlation_logic_builder.py",
+  "False Positive Rate": 0.0,
+  "FP Reduction": "",
+  "Synthetic": false
+}

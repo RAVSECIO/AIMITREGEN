@@ -1,0 +1,282 @@
+[
+  {
+    "tool_name": "BIGIP ASM WAF",
+    "data_sources": ["Web Traffic", "HTTP Headers", "Request Body"],
+    "tech_categories": ["network", "web"],
+    "supported_techniques": ["T1190", "T1071.001", "T1133"],
+    "fields": ["src_ip", "dest_ip", "http_method", "uri", "user_agent", "timestamp"]
+  },
+  {
+    "tool_name": "BITSIGHT ASM",
+    "data_sources": ["External Attack Surface", "Vulnerability Scans"],
+    "tech_categories": ["external", "risk"],
+    "supported_techniques": ["T1595", "T1589", "T1592"],
+    "fields": ["asset", "vulnerability", "severity", "first_seen", "last_seen"]
+  },
+  {
+    "tool_name": "CHECKPOINT FIREWALL",
+    "data_sources": ["Network Traffic", "Firewall Logs"],
+    "tech_categories": ["network", "firewall"],
+    "supported_techniques": ["T1071", "T1133", "T1190"],
+    "fields": ["src_ip", "dest_ip", "port", "protocol", "action", "timestamp"]
+  },
+  {
+    "tool_name": "SYMANTEC WSS PROXY",
+    "data_sources": ["Web Traffic", "SSL Inspection"],
+    "tech_categories": ["network", "web"],
+    "supported_techniques": ["T1071.001", "T1567", "T1133"],
+    "fields": ["user", "url", "category", "action", "bytes", "timestamp"]
+  },
+  {
+    "tool_name": "CACHEFLOW ELFF PROXY",
+    "data_sources": ["Web Traffic", "Cached Objects"],
+    "tech_categories": ["network", "web"],
+    "supported_techniques": ["T1071.001", "T1567", "T1133"],
+    "fields": ["client_ip", "url", "method", "status_code", "user_agent", "timestamp"]
+  },
+  {
+    "tool_name": "CYBERARK PAM",
+    "data_sources": ["Privileged Sessions", "Credential Access"],
+    "tech_categories": ["identity", "privileged"],
+    "supported_techniques": ["T1078", "T1110", "T1552"],
+    "fields": ["account", "target", "session_start", "session_end", "commands"]
+  },
+  {
+    "tool_name": "DAM",
+    "data_sources": ["Database Queries", "Schema Changes"],
+    "tech_categories": ["database", "monitoring"],
+    "supported_techniques": ["T1213", "T1195", "T1078"],
+    "fields": ["db_user", "query", "target", "timestamp", "client_ip"]
+  },
+  {
+    "tool_name": "DECEPTION TECHNOLOGY",
+    "data_sources": ["Honeypot Interactions", "Credential Traps"],
+    "tech_categories": ["network", "detection"],
+    "supported_techniques": ["T1078", "T1110", "T1195"],
+    "fields": ["attacker_ip", "interaction_type", "timestamp", "credentials_attempted"]
+  },
+  {
+    "tool_name": "LINUX SERVERS",
+    "data_sources": ["System Logs", "Authentication Logs"],
+    "tech_categories": ["endpoint", "server"],
+    "supported_techniques": ["T1078", "T1059", "T1547"],
+    "fields": ["user", "process", "command", "timestamp", "host"]
+  },
+  {
+    "tool_name": "CROWDSTRIKE XDR",
+    "data_sources": ["Process Monitoring", "File Monitoring"],
+    "tech_categories": ["endpoint", "xdr"],
+    "supported_techniques": ["T1547.001", "T1059"],
+    "fields": ["process_name", "parent_process", "cmdline", "timestamp", "host"]
+  },
+  {
+    "tool_name": "CISCO FIREPOWER FMC",
+    "data_sources": ["Network Traffic", "IPS Events"],
+    "tech_categories": ["network", "firewall"],
+    "supported_techniques": ["T1071", "T1190", "T1133"],
+    "fields": ["src_ip", "dest_ip", "port", "protocol", "signature", "timestamp"]
+  },
+  {
+    "tool_name": "CISCO SECURE ACS AAA",
+    "data_sources": ["Authentication Logs", "Authorization Events"],
+    "tech_categories": ["identity", "network"],
+    "supported_techniques": ["T1078", "T1110"],
+    "fields": ["user", "device", "auth_method", "result", "timestamp"]
+  },
+  {
+    "tool_name": "DEMISTO SOAR",
+    "data_sources": ["Incident Records", "Playbook Executions"],
+    "tech_categories": ["orchestration", "automation"],
+    "supported_techniques": ["T1059", "T1060"],
+    "fields": ["incident_id", "playbook", "execution_time", "status", "analyst"]
+  },
+  {
+    "tool_name": "QUALYS VM",
+    "data_sources": ["Vulnerability Scans", "Asset Inventory"],
+    "tech_categories": ["vulnerability", "risk"],
+    "supported_techniques": ["T1595", "T1195"],
+    "fields": ["asset", "vulnerability", "severity", "first_detected", "last_detected"]
+  },
+  {
+    "tool_name": "INFOBLOX DNS",
+    "data_sources": ["DNS Queries", "DNS Responses"],
+    "tech_categories": ["network", "dns"],
+    "supported_techniques": ["T1071.004", "T1568"],
+    "fields": ["query", "response", "client_ip", "timestamp", "record_type"]
+  },
+  {
+    "tool_name": "ARBOR DDOS",
+    "data_sources": ["Network Traffic", "Anomaly Detection"],
+    "tech_categories": ["network", "ddos"],
+    "supported_techniques": ["T1498", "T1499"],
+    "fields": ["src_ip", "dest_ip", "pps", "bps", "protocol", "timestamp"]
+  },
+  {
+    "tool_name": "CISCO/ARUBA ROUTER",
+    "data_sources": ["Routing Tables", "ACL Logs"],
+    "tech_categories": ["network", "infrastructure"],
+    "supported_techniques": ["T1071", "T1133"],
+    "fields": ["src_ip", "dest_ip", "interface", "action", "timestamp"]
+  },
+  {
+    "tool_name": "CISCO WLC",
+    "data_sources": ["Wireless Auth", "Client Sessions"],
+    "tech_categories": ["network", "wireless"],
+    "supported_techniques": ["T1078", "T1133"],
+    "fields": ["client_mac", "ap", "ssid", "auth_method", "timestamp"]
+  },
+  {
+    "tool_name": "SYMANTEC DLP",
+    "data_sources": ["Data Transfers", "Content Inspection"],
+    "tech_categories": ["data", "protection"],
+    "supported_techniques": ["T1030", "T1052", "T1114"],
+    "fields": ["user", "content_type", "action", "destination", "timestamp"]
+  },
+  {
+    "tool_name": "IMPERVA DAM",
+    "data_sources": ["Database Queries", "Schema Changes"],
+    "tech_categories": ["database", "monitoring"],
+    "supported_techniques": ["T1213", "T1195", "T1078"],
+    "fields": ["db_user", "query", "target", "timestamp", "client_ip"]
+  },
+  {
+    "tool_name": "CITRIX NETSCALER",
+    "data_sources": ["Load Balancing", "SSL Offloading"],
+    "tech_categories": ["network", "web"],
+    "supported_techniques": ["T1071", "T1133", "T1190"],
+    "fields": ["client_ip", "vip", "method", "url", "user_agent", "timestamp"]
+  },
+  {
+    "tool_name": "APACHE WEB SERVER",
+    "data_sources": ["Access Logs", "Error Logs"],
+    "tech_categories": ["web", "server"],
+    "supported_techniques": ["T1190", "T1071.001", "T1133"],
+    "fields": ["client_ip", "request", "status", "user_agent", "timestamp"]
+  },
+  {
+    "tool_name": "TUFIN SECURETRACK",
+    "data_sources": ["Firewall Rules", "Policy Changes"],
+    "tech_categories": ["network", "policy"],
+    "supported_techniques": ["T1078", "T1133"],
+    "fields": ["change_id", "admin", "device", "rule", "timestamp"]
+  },
+  {
+    "tool_name": "NETSKOPE",
+    "data_sources": ["Cloud Traffic", "SaaS Monitoring"],
+    "tech_categories": ["cloud", "casb"],
+    "supported_techniques": ["T1078", "T1133", "T1567"],
+    "fields": ["user", "app", "action", "data_type", "timestamp"]
+  },
+  {
+    "tool_name": "PALO ALTO/CISCO ASA/FORTIGATE",
+    "data_sources": ["Network Traffic", "VPN Logs"],
+    "tech_categories": ["network", "firewall"],
+    "supported_techniques": ["T1071", "T1133", "T1190"],
+    "fields": ["src_ip", "dest_ip", "port", "protocol", "action", "timestamp"]
+  },
+  {
+    "tool_name": "WINDOWS SERVERS",
+    "data_sources": ["Event Logs", "Authentication Logs"],
+    "tech_categories": ["endpoint", "server"],
+    "supported_techniques": ["T1078", "T1059", "T1547"],
+    "fields": ["user", "process", "command", "timestamp", "host"]
+  },
+  {
+    "tool_name": "AZURE AUDIT LOGS",
+    "data_sources": ["Management Events", "Resource Logs"],
+    "tech_categories": ["cloud", "audit"],
+    "supported_techniques": ["T1078", "T1133", "T1110"],
+    "fields": ["user", "operation", "resource", "result", "timestamp"]
+  },
+  {
+    "tool_name": "GCP LOGS",
+    "data_sources": ["Audit Logs", "VPC Flow Logs"],
+    "tech_categories": ["cloud", "audit"],
+    "supported_techniques": ["T1078", "T1133", "T1110"],
+    "fields": ["user", "operation", "resource", "result", "timestamp"]
+  },
+  {
+    "tool_name": "MCAFEE IPS",
+    "data_sources": ["Network Traffic", "Intrusion Events"],
+    "tech_categories": ["network", "ips"],
+    "supported_techniques": ["T1190", "T1071", "T1133"],
+    "fields": ["src_ip", "dest_ip", "signature", "severity", "timestamp"]
+  },
+  {
+    "tool_name": "LOG RETENTION",
+    "data_sources": ["All Log Sources", "Archived Logs"],
+    "tech_categories": ["storage", "compliance"],
+    "supported_techniques": ["T1078", "T1110", "T1133"],
+    "fields": ["log_source", "retention_period", "compression", "location"]
+  },
+  {
+    "tool_name": "SERVICENOW SECOPS",
+    "data_sources": ["Incident Records", "Vulnerability Items"],
+    "tech_categories": ["ticketing", "orchestration"],
+    "supported_techniques": ["T1059", "T1060"],
+    "fields": ["incident_id", "priority", "status", "assigned_to", "timestamp"]
+  },
+  {
+    "tool_name": "SMART VISION",
+    "data_sources": ["Network Traffic", "Behavioral Analysis"],
+    "tech_categories": ["network", "behavioral"],
+    "supported_techniques": ["T1071", "T1133", "T1190"],
+    "fields": ["src_ip", "dest_ip", "anomaly_score", "behavior", "timestamp"]
+  },
+  {
+    "tool_name": "VMWARE HORIZON",
+    "data_sources": ["Virtual Desktop Sessions", "Authentication Logs"],
+    "tech_categories": ["virtualization", "vdi"],
+    "supported_techniques": ["T1078", "T1133"],
+    "fields": ["user", "client_ip", "session_start", "session_end", "protocol"]
+  },
+  {
+    "tool_name": "AZURE AD",
+    "data_sources": ["Authentication Logs", "Directory Service Access"],
+    "tech_categories": ["identity", "cloud"],
+    "supported_techniques": ["T1110.003", "T1078"],
+    "fields": ["user", "auth_method", "timestamp", "ip"]
+  },
+  {
+    "tool_name": "SYMANTEC DCS (DATA CENTER SECURITY)",
+    "data_sources": ["Server Monitoring", "File Integrity"],
+    "tech_categories": ["endpoint", "server"],
+    "supported_techniques": ["T1078", "T1547", "T1112"],
+    "fields": ["host", "change_type", "target", "user", "timestamp"]
+  },
+  {
+    "tool_name": "AWS",
+    "data_sources": ["CloudTrail Logs", "VPC Flow Logs"],
+    "tech_categories": ["cloud", "audit"],
+    "supported_techniques": ["T1078", "T1133", "T1110"],
+    "fields": ["user", "event_name", "resource", "source_ip", "timestamp"]
+  },
+  {
+    "tool_name": "BROADCOM CASB",
+    "data_sources": ["Cloud App Usage", "Shadow IT Discovery"],
+    "tech_categories": ["cloud", "casb"],
+    "supported_techniques": ["T1078", "T1133", "T1567"],
+    "fields": ["user", "app", "action", "data_type", "timestamp"]
+  },
+  {
+    "tool_name": "RSA NET PACKET",
+    "data_sources": ["Network Traffic", "Packet Capture"],
+    "tech_categories": ["network", "forensics"],
+    "supported_techniques": ["T1071", "T1133", "T1190"],
+    "fields": ["src_ip", "dest_ip", "protocol", "size", "timestamp"]
+  },
+  {
+    "tool_name": "O365",
+    "data_sources": ["Audit Logs", "Mailbox Access"],
+    "tech_categories": ["cloud", "email"],
+    "supported_techniques": ["T1078", "T1133", "T1114"],
+    "fields": ["user", "operation", "object", "client_ip", "timestamp"]
+  },
+  {
+    "tool_name": "CYBERARK EPM",
+    "data_sources": ["Endpoint Privileges", "Process Execution"],
+    "tech_categories": ["endpoint", "privileged"],
+    "supported_techniques": ["T1078", "T1547", "T1059"],
+    "fields": ["host", "user", "process", "privilege", "timestamp"]
+  }
+]

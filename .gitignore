@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# Generated files
+outputs/
+*.log
+.coverage
+.mypy_cache/
+.pytest_cache/

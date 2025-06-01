@@ -1,0 +1,11 @@
+requests
+sentence-transformers
+numpy
+scikit-learn
+tqdm
+Jinja2
+PyYAML
+openpyxl # For Excel export
+pysigma # For Sigma rule validation
+sigmatools # For Sigma rule validation
+pandas

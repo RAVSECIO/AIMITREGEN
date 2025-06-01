@@ -1,0 +1,40 @@
+title: "{{ title }}"
+id: "{{ id }}"
+status: "{{ status }}"
+description: "{{ description }}"
+author: "{{ author }}"
+date: "{{ date }}"
+logsource:
+  product: "{{ logsource_product }}"
+  category: "{{ logsource_category }}"
+  service: "{{ logsource_service }}"
+detection:
+  {{ detection_condition }}:
+{% for key, value in detection_selection_dict.items() %}
+    {{ key }}:
+{% if value is iterable and not value is string %}
+{% for v in value %}
+      - '{{ v }}'
+{% endfor %}
+{% else %}
+      - '{{ value }}'
+{% endif %}
+{% endfor %}
+  condition: "{{ detection_condition }}"
+falsepositives:
+{% for fp in falsepositives %}
+  - "{{ fp }}"
+{% endfor %}
+level: "{{ level }}"
+tags:
+{% for tag in tags %}
+  - "{{ tag }}"
+{% endfor %}
+fields:
+{% if fields %}
+{% for field in fields %}
+  - "{{ field }}"
+{% endfor %}
+{% else %}
+  []
+{% endif %}
