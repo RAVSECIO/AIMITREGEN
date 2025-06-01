@@ -1,7 +1,7 @@
 # AIMitreGen: AI-Powered MITRE ATT&CK to Sigma Rule Generator
 
 ![Python Version](https://img.shields.io/badge/Python-3.9%2B-blue)
-![License](https://img.shields.io/github/license/RAVSECIO/AIMITREGEN?color=green)
+![License](https://img.shields.io/badge/License-Apache%202.0-green)
 [![GitHub last commit](https://img.shields.io/github/last-commit/RAVSECIO/AIMITREGEN)](https://github.com/RAVSECIO/AIMITREGEN/commits/main)
 [![GitHub issues](https://img.shields.io/github/issues/RAVSECIO/AIMITREGEN)](https://github.com/RAVSECIO/AIMITREGEN/issues)
 [![GitHub stars](https://img.shields.io/github/stars/RAVSECIO/AIMITREGEN?style=social)](https://github.com/RAVSECIO/AIMITREGEN/stargazers)
